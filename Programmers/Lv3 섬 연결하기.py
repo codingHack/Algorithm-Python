@@ -37,6 +37,7 @@ def solution(n, costs):
             graph[cost[1]]=[]
     
     edge=0 #연결된 엣지 수
+    
     for cost in costs:        
         #사이클이 없다면 edgs,비용 추기
         if not hasCycle(graph,cost):
