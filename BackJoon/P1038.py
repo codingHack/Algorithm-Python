@@ -13,7 +13,6 @@ else:
         v=queue.pop(0)
         DP.append(v)
         
-        #v아랫수를 큐에 추가
         for i in range(0,int(v%10)):
             queue.append((v*10)+i)
     print(DP[number-1])
