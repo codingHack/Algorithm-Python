@@ -5,7 +5,10 @@ for _ in range(case_num):
     if s[0]=='push':
         stack.append(int(s[1]))
     elif s[0]=='top':
-        print(stack[-1])
+        if len(stack)==0:
+            print(-1)
+        else:
+            print(stack[-1])
     elif s[0]=='size':
         print(len(stack))
     elif s[0]=='pop':
