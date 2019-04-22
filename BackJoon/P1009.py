@@ -7,12 +7,14 @@ for _ in range(N):
         if len(stack)==0:
             stack.append(cur)
         else:
-            nam=cur*arr[0]%10
+            nam=(cur*arr[0])%10
             if stack[0]==nam:
                 break
             else:
                 stack.append(nam)
                 cur=nam
-    print(stack)
-    print(stack[arr[1]%len(stack)-1])
+    if stack[0]==0:
+        print(10)
+    else:
+        print(stack[arr[1]%len(stack)-1])
     
