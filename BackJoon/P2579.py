@@ -1,15 +1,13 @@
-stair_num=int(input())
+N=int(input())
+co=[0]
+for _ in range(N):
+    co.append(int(input()))
 
-score=[]
-for i in range(0,stair_num):
-    score.append(int(input()))
+DP=[0 for i in range(N+1)]
 
-DP=[0]*(stair_num+1)
+DP[1]=co[1]
+DP[2]=DP[1]+co[2]
+for i in range(3,N+1):
+    DP[i]=co[i]+max(co[i-1]+DP[i-3],DP[i-2])
 
-DP[0]=score[0]
-DP[1]=score[0]+score[1]
-DP[2]=max(DP[1]+score[2],DP[2]+score[2])
-
-for i in range(3,stair_num+1):
-    DP[i]=max(DP[i-1]+DP[i-3]+score[i],DP[i-2]+score[i])
-print(DP)
+print(DP[-1])
