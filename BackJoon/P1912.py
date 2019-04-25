@@ -10,7 +10,6 @@ t=False
 for i in range(1,len(arr)):
     if arr[i]>=0:
         t=True
-    print(t)
 if t:
     maxN=[0 for i in range(N+1)]
     table=[0 for i in range(N+1)]
