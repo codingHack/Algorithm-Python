@@ -45,7 +45,7 @@ graph=[[] for i in range(N+1)]
 """
 v=int(input())
 for i in range(v):
-    arr=list(map(lambda x:int(x),input().split()))
+    arr=list(map(int,input().split()))
     graph[arr[0]].append(arr[1])
     graph[arr[1]].append(arr[0])
 
